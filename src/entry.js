@@ -8,7 +8,7 @@ app.controller('VersionCtrl', function($scope, $http) {
 
   $scope.getVersions = function() {
     $scope.loading = true;
-    $http.get('http://npm-registry-cors-proxy.herokuapp.com/' + $scope.package)
+    $http.get('https://registry.npmjs.cf/' + $scope.package)
       .success(function(data, status, headers, config) {
         versions = Object.keys(data.versions);
 
